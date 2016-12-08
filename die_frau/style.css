@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
+@import url('https://fonts.googleapis.com/css?family=Hind+Guntur');
 
 body {
+    position: relative;
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -133,7 +136,102 @@ h2::after {
 
 footer {
 	padding: 0 2em;
-	font-size: 0.8em;
+	font-size: 1.2em;
 	font-weight: 100;
 	color: #DF5C29;
+}
+
+#contentinfo {
+    width: 23em;
+    height: 17em;
+    position: absolute;
+    right: 1em;
+    bottom: 0;
+    line-height: 1;
+    font-size: 1.25em;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(250, 245, 237, 0.5);
+    shape-inside: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+
+/*
+#contentinfo:before {
+    content: '';
+    display: block;
+    height: 17em;
+    width: 8em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    shape-outisde: polygon(0 0, 90% 0, 39% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 90% 0, 39% 100%, 0% 100%);
+}
+
+#contentinfo:after {
+    content: '';
+    display: block;
+    height: 17em;
+    width: 8em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    -webkit-clip-path: polygon(12% 0, 100% 0, 100% 100%, 61% 100%);
+}
+*/
+
+#content1 {
+    color: #393339;
+}
+
+#content1 small {
+    color: #756968;
+    font-family: 'Hind Guntur', sans-serif;
+    letter-spacing: -0.5px;
+    font-size: 0.6em;
+}
+
+#content1 h3 {
+    font-size: 2.2em;
+    margin-bottom: -0.2em;
+}
+
+#content1 p {
+    font-family: 'Hind Guntur', sans-serif;
+    letter-spacing: -0.5px;
+    font-size: 0.6em;
+}
+
+#content1 sup {
+    font-size: 0.2em;
+    letter-spacing: 0;
+    position: relative;
+    top: 3px;
+    right: -1px;
+    padding-right: 2px;
+}
+
+#content2 {
+    padding: 1.4em 3em;
+    color: #2C373F;
+    background-color: #B4B1B8;
+}
+
+#content2 small {
+    font-size: 0.9em;
+}
+
+#content2 h3 {
+    font-size: 2.2em;
+    margin: 0.2em 0 0.7em;
+    transform: scaleY(1.3);
+}
+
+#content2 p {
+    font-size: 0.9em;
+    line-height: 0.2em;
 }
