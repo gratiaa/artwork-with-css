@@ -139,6 +139,7 @@ footer {
 	font-size: 1.2em;
 	font-weight: 100;
 	color: #DF5C29;
+    background-color: #FAF5ED;
 }
 
 #contentinfo {
@@ -218,7 +219,7 @@ footer {
 #content2 {
     padding: 1.4em 3em;
     color: #2C373F;
-    background-color: #B4B1B8;
+    background-color: rgba(180, 177, 184, 0.6);
 }
 
 #content2 small {
