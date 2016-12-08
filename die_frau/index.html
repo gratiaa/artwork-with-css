@@ -5,22 +5,59 @@
 	<title>Die Frau Ohne Namen</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body" style="background-color: gainsboro">
 <section>
 	<header>
 		<h1>DIE FRAU OHNE NAMEN</h1>
 		<h2>ZWEITER TEIL</h2>
 	</header>
 	<div id="plane_wrap" style="perspective-origin: 108% 0%;">
-		<img src="die_namen_03.jpg" id="scene3" alt="장면3">
-		<img src="die_namen_07.png" id="scene2" alt="장면2">
-		<img src="die_namen_11.png" id="scene1" alt="장면1">
+		<img src="die_namen_03.jpg" id="scene3" alt="scene3">
+		<img src="die_namen_07.png" id="scene2" alt="scene2">
+		<img src="die_namen_11.png" id="scene1" alt="scene1">
 		<div id="plane_front">
-				<img src="die_namen_02.png" id="woman" alt="여인">
-				<img src="die_namen_01.png" id="train" alt="기차">
+				<img src="die_namen_02.png" id="woman" alt="woman with hat">
+				<img src="die_namen_01.png" id="train" alt="train">
 		</div>
 	</div>
 </section>
 <footer>ENTWURF: JAN TSCHICHOLD, PLANEGG B. MCH.DRUCK: GEBR. OBPACHER AG. MÜNCHEN</footer>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script>
+    function detectMouseMove(evt) {
+        let x = evt.clientX / innerWidth;
+        let y = evt.clientY / innerHeight;
+        let currentX, currentY;
+
+        currentX = x*100*2 + 8;
+        currentY = y*100*2 - 50;
+
+        plane_wrap.setAttribute("style","perspective-origin:" + currentX + "% " + currentY + "%;");
+    };
+    
+    $(function() {
+        var flag = false;
+        
+        $("#body").bind({
+            click: function() {
+                if (flag === false) {
+                    flag = true;
+                    $(this).css("backgroundColor", "#B2DFDB");
+                } else if (flag === true) {
+                    flag = false;
+                    $(this).css("backgroundColor", "gainsboro");   
+                }
+            },
+            mousemove: function(evt) {
+                if (flag === true) {
+                    detectMouseMove(evt);
+                }
+            },
+        });
+    });
+</script>
 </body>
 </html>
