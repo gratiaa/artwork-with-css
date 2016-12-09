@@ -154,7 +154,6 @@ footer {
     text-align: center;
     text-transform: uppercase;
     background-color: rgba(250, 245, 237, 0.5);
-    shape-inside: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
 }
 
