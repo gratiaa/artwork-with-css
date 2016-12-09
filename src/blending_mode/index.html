@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Blending Mode Example</title>
+<link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+<style>
+    body {
+        background: url(bg5.jpg) 0 0 no-repeat;
+        background-size: auto auto;
+    }
+    article {
+        font-family: 'Fira Mono', monospace;
+        width: 1100px;
+        margin: 3em auto;
+        padding: 1em;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    section {
+        margin-top: 5em;
+    }
+    h1, 
+    h2 {
+        text-align: center;
+    }
+    li {
+        width: 500px;
+        display: block;
+        float: left;
+    }
+    ol::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    h1 {
+        position: absolute;
+        left: -1em;
+        bottom: 0;
+        z-index: 2;
+        color: black;
+        background-color: white;
+        font-size: 4em;
+        line-height: 1.3;
+        letter-spacing: -2px;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 1.5em;
+        padding-left: 5em;
+    }
+    header {
+        position: relative;
+    }
+    footer {
+        font-size: 0.8em;
+        text-align: right;
+        letter-spacing: -1px;
+    }
+    a {
+        color: brown;
+        text-decoration: none;
+        border-bottom: 1px dashed brown;
+    }
+    .ani_wrap {
+        margin: 0 auto;
+        position: relative;
+        width: 50%;
+        height: 689px;
+    }
+    .ani_wrap img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+    }
+    #port2 {
+        left: 33.3%;
+        opacity: 1;
+        mix-blend-mode: multiply;
+    }
+    #port3 {
+        left: 66.6%;
+        opacity: 0.5;
+        mix-blend-mode: multiply;
+    }
+    .img_wrap {
+        width: 500px;
+        height: 501px;
+        padding: 57px 100px;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    .img_wrap_inner {
+        width: 300px;
+        height: 387px;
+        overflow: hidden;
+        position: relative;
+    }
+    .img_wrap_inner img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+</head>
+<body>
+<article>
+    <header>
+        <h1>CSS Blending Mode Examples</h1>
+        <div class="ani_wrap">
+            <img src="portrait.jpg" id="port1">
+            <img src="portrait.jpg" id="port2">
+            <img src="portrait.jpg" id="port3">
+        </div>
+    </header>
+    <section>
+        <h2><pre><a href="https://drafts.fxtf.org/compositing-1/">'mix-blend-mode'</a></pre></h2>
+        <ol>
+            <li>
+                <h3><pre>normal</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:normal;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>multiply</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:multiply;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>screen</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:screen;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>overlay</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:overlay;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>darken</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:darken;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>lighten</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:lighten;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>color-dodge</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:color-dodge;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>color-burn</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:color-burn;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>hard-light</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:hard-light;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>soft-light</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:soft-light;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>difference</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:difference;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>exclusion</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:exclusion;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>hue</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:hue;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>saturation</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:saturation;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>color</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:color;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3><pre>luminosity</pre></h3>
+                <div class="img_wrap">
+                    <div class="img_wrap_inner">
+                        <img src="portrait.jpg">
+                        <img src="bg4.jpg" style="opacity:0.8;mix-blend-mode:luminosity;">
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <footer>
+    Young Bae, 2016, 
+    Inspired by <a href="https://youtu.be/BaQl84nDBNY">Bauhaus in the Browser, Justin McDowell</a>
+    </footer>
+</article>
+</body>
+</html>
