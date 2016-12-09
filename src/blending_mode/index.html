@@ -18,7 +18,7 @@
         background-color: #fff;
     }
     section {
-        margin-top: 5em;
+        margin-top: 15em;
     }
     h1, 
     h2 {
@@ -70,6 +70,7 @@
         position: relative;
         width: 50%;
         height: 689px;
+        perspective: 100vw;
     }
     .ani_wrap img {
         width: 100%;
@@ -78,6 +79,11 @@
         top: 0;
         left: 0;
         opacity: 0.7;
+        transition: transform 1.5s ease-in-out;
+        will-change: transform;
+    }
+    #port1 {
+        transform: translate3D(0, -10%, -50vw);
     }
     #port2 {
         left: 33.3%;
@@ -85,9 +91,14 @@
         mix-blend-mode: multiply;
     }
     #port3 {
+        transform: translate3D(0, 10%, 10vw);
         left: 66.6%;
         opacity: 0.5;
         mix-blend-mode: multiply;
+    }
+    .ani_wrap:hover #port1,
+    .ani_wrap:hover #port3 {
+        transform: translate3D(0, 0, 0);
     }
     .img_wrap {
         width: 500px;
